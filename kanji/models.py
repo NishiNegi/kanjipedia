@@ -1,0 +1,56 @@
+from django.db import models
+
+# Create your models here.
+
+class Kanji (models.Model):
+    def __str__(self):
+        return self.character
+    character = models.CharField(max_length=5)
+    JISCodePoint = models.CharField(max_length=20, blank=True, null=True)
+    unicode = models.CharField(max_length=20, blank=True, null=True)
+    classicalRadical = models.IntegerField(blank=True, null=True)
+    NelsonRadical = models.IntegerField(blank=True, null=True)
+    grade = models.IntegerField(blank=True, null=True)
+    strokeCount = models.IntegerField(blank=True, null=True)
+    frequency = models.IntegerField(blank=True, null=True)
+    # Cambiar después por una relación con la base de datos de radicales
+    radical = models.CharField(max_length=5, blank=True, null=True)
+    JLPT = models.IntegerField(blank=True, null=True)
+    dicNelsonClassic = models.IntegerField(blank=True, null=True)
+    dicNelsonNew = models.CharField(max_length=20, blank=True, null=True)
+    dicHalpernNJECD = models.IntegerField(blank=True, null=True)
+    dicKodanshaKanji = models.IntegerField(blank=True, null=True)
+    dicKanjiLearners = models.IntegerField(blank=True, null=True)
+    dicKanjiLearners2 = models.IntegerField(blank=True, null=True)
+    dicHeisig = models.IntegerField(blank=True, null=True)
+    dicHeisig6 = models.IntegerField(blank=True, null=True)
+    dicGakken = models.IntegerField(blank=True, null=True)
+    dicOneillNames = models.CharField(max_length=20, blank=True, null=True)
+    dicOneillKk = models.IntegerField(blank=True, null=True)
+    dicMorohashi = models.CharField(max_length=50, blank=True, null=True)
+    dicHenshall = models.IntegerField(blank=True, null=True)
+    dicKanjiKana = models.IntegerField(blank=True, null=True)
+    dicKanjiKana2011 = models.IntegerField(blank=True, null=True)
+    dicSakade = models.IntegerField(blank=True, null=True)
+    dicJapaneseKanjiFlashcards = models.IntegerField(blank=True, null=True)
+    dicHenshall3 = models.IntegerField(blank=True, null=True)
+    dicTuttleCards = models.IntegerField(blank=True, null=True)
+    dicCrowley = models.IntegerField(blank=True, null=True)
+    dicKanjiContext = models.IntegerField(blank=True, null=True)
+    dicKodanshaCompact = models.IntegerField(blank=True, null=True)
+    dicJapaneseBusyPeople = models.CharField(
+        max_length=20, blank=True, null=True)
+    dicManiette = models.IntegerField(blank=True, null=True)
+    skip = models.CharField(max_length=15, blank=True, null=True)
+    SandH = models.CharField(max_length=15, blank=True, null=True)
+    fourCorner = models.CharField(max_length=15, blank=True, null=True)
+    deRoo = models.CharField(max_length=15, blank=True, null=True)
+    onyomi = models.CharField(max_length=15, blank=True, null=True)
+    kunyomi = models.CharField(max_length=15, blank=True, null=True)
+    nanori = models.CharField(max_length=15, blank=True, null=True)
+    meaningEn = models.CharField(max_length=100, blank=True, null=True)
+    meaningEs = models.CharField(max_length=100, blank=True, null=True)
+    # cambiar cuando esté el models de los tipos
+    kind = models.CharField(max_length=10, blank=True, null=True)
+    ethimology = models.TextField(blank=True, null=True)
+    nemonics = models.TextField(blank=True, null=True)
