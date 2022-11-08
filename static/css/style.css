@@ -1,0 +1,27 @@
+body {
+  min-height: 100vh;
+  font-family: "Red Hat Display", sans-serif;
+}
+h1#site-name {
+  letter-spacing: 0.15em;
+}
+*[lang="ja"] {
+  font-family: "Klee One", cursive, sans-serif;
+  font-size: 2em;
+}
+footer {
+  position: relative;
+  bottom: 0;
+}
+form#search-home {
+  padding: 1em;
+}
+form#search-home input[type="search"] {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+form#search-home button {
+  background-color: rgb(243, 243, 243);
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}

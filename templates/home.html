@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block content %}
+<main id="container" class="text-center">
+  {% load static %}
+  <form action="" class="mb-5 row" id="search-home">
+    <div class="col g-0">
+      <input class="form-control" type="search" name="" id="" />
+    </div>
+    <div class="col-1 g-0">
+      <button class="form-control" type="submit">Buscar</button>
+    </div>
+  </form>
+  <h1 id="site-name" class="fw-light">
+    <span lang="ja">漢字典</span> <br />
+    Kanjipedia
+  </h1>
+  <section>
+    <ul>
+      <li><a href="#">JLPT</a></li>
+      <li><a href="#">Grado escolar</a></li>
+      <li><a href="#">Número de trazos</a></li>
+    </ul>
+  </section>
+</main>
+
+{% endblock content %}
